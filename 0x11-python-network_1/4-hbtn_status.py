@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""Fetches the URL: https://intranet.hbtn.io/status
-with `requests` module
-"""
+""" module doc """
 import requests
 
+
 if __name__ == "__main__":
-    response = requests.get('https://intranet.hbtn.io/status')
-    req = "Body response:\n\t- type: {}\n\t- content: {}"
-    print(req.format(type(response.text), response.text))
+    url = "https://alx-intranet.hbtn.io/status"
+    res = requests.get(url)
+    data = res.text
+    resType = type(data)
+    print(f"Body response:\n\t- type: {resType}\n\t\
+- content: {data}")
